@@ -5,13 +5,11 @@ const STORAGE_KEY = "sf-ug-theme";
 
 function getInitialTheme() {
   // Prefer saved preference.
-  const saved = typeof window !== "undefined" ? window.localStorage.getItem(STORAGE_KEY) : null;
+  const saved =
+    typeof window !== "undefined"
+      ? window.localStorage.getItem(STORAGE_KEY)
+      : null;
   if (saved === "light" || saved === "dark") return saved;
-
-  // Fall back to OS preference.
-  if (typeof window !== "undefined" && window.matchMedia) {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
 
   return "light";
 }
@@ -28,11 +26,13 @@ export function ThemeProvider({ children }) {
     () => ({
       theme,
       setTheme: setThemeState,
-      toggleTheme: () => setThemeState((t) => (t === "light" ? "dark" : "light")),
+      toggleTheme: () =>
+        setThemeState((t) => (t === "light" ? "dark" : "light")),
     }),
     [theme],
   );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
-

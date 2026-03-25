@@ -42,14 +42,26 @@
 
   /* CORE BRAND ALIASES */
   --color-primary: var(--zurich-blue-500);
-  --color-background: var(--thamar-black-950);
-  --color-text-primary: var(--smoke-100);
-  --color-text-secondary: var(--smoke-500);
+  --color-background: #ffffff;
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #464646;
   
   --font-heading: 'Anton', sans-serif;
   --font-body: 'Source Sans 3', sans-serif;
 
-  /* THEME VARS */
+  /* THEME VARS — LIGHT (DEFAULT) */
+  --sectionBgA: #ffffff;
+  --sectionBgB: #f8fafc;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --hero-title: #0a0a0a;
+  --hero-body: #464646;
+}
+
+[data-theme='dark'] {
+  --color-background: var(--thamar-black-950);
+  --color-text-primary: var(--smoke-100);
+  --color-text-secondary: var(--smoke-500);
   --sectionBgA: #000000;
   --sectionBgB: #050505;
   --nav-bg: rgba(0, 0, 0, 0.8);
@@ -58,20 +70,9 @@
   --hero-body: #a3a3a3;
 }
 
-[data-theme='light'] {
-  --sectionBgA: #ffffff;
-  --sectionBgB: #f8fafc;
-  --nav-bg: rgba(255, 255, 255, 0.8);
-  --nav-border: rgba(0, 0, 0, 0.1);
-  --hero-title: #0a0a0a;
-  --hero-body: #464646;
-  --color-text-primary: #0a0a0a;
-  --color-text-secondary: #464646;
-}
-
 body {
   font-family: var(--font-body);
-  background-color: var(--section-bg);
+  background-color: var(--sectionBgA);
   color: var(--color-text-primary);
   margin: 0;
 }
