@@ -99,7 +99,7 @@ export default function About() {
       id="about"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="scroll-mt-24 py-24 lg:py-32 relative bg-(--sectionBgB) overflow-hidden"
     >
@@ -108,8 +108,18 @@ export default function About() {
       <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        {/* About: Section Header */}
+        <div className="mb-20 text-center">
+          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
+            Identity & Vision
+          </h4>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading text-(--color-heading) uppercase tracking-tight">
+            About Smart-Fisher <span className="text-blue-600">Uganda</span>
+          </h1>
+        </div>
+
         {/* About: Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 lg:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 lg:mb-32">
           <div className="p-8 lg:p-12 rounded-3xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md transition-all">
             <h3 className="text-3xl font-heading tracking-widest uppercase mb-8 text-(--color-heading)">
               The Mission
@@ -133,8 +143,8 @@ export default function About() {
         </div>
 
         {/* About: Core Outcomes (Merged from Impact) */}
-        <div className="mb-40">
-          <div className="text-center mb-20">
+        <div className="mb-24 lg:mb-40">
+          <div className="text-center mb-16 lg:mb-20">
             <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
               Economic Transformation
             </h4>
@@ -167,7 +177,7 @@ export default function About() {
         </div>
 
         {/* About: Pillars */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5">
             <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-emerald-600 mb-4">
               Strategic Framework

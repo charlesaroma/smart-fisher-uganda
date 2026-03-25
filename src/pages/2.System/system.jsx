@@ -8,7 +8,7 @@ export default function System() {
       id="system"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.1 }}
       className="scroll-mt-24 py-24 lg:py-32 bg-(--sectionBgB)"
     >
       <div className="layout-spine">

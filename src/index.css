@@ -56,6 +56,8 @@
   --nav-border: rgba(0, 0, 0, 0.1);
   --hero-title: #0a0a0a;
   --hero-body: #464646;
+  --color-heading: #0a0a0a;
+  --color-text-muted: #64748b;
 }
 
 [data-theme='dark'] {
@@ -68,6 +70,8 @@
   --nav-border: rgba(255, 255, 255, 0.1);
   --hero-title: #ffffff;
   --hero-body: #a3a3a3;
+  --color-heading: #ffffff;
+  --color-text-muted: #94a3b8;
 }
 
 body {

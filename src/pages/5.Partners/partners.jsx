@@ -14,7 +14,7 @@ export default function Partners() {
       id="partners"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="scroll-mt-24 py-24 lg:py-32 bg-(--sectionBgA)"
     >
@@ -38,7 +38,7 @@ export default function Partners() {
               key={p.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.08 }}
               className="rounded-2xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md p-6 flex items-center justify-center"
             >
