@@ -19,7 +19,7 @@ export default function System() {
               Core Platform
             </span>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-heading uppercase text-(--hero-title) mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading uppercase text-(--hero-title) mb-6">
             The Platform
           </h2>
           <p className="text-lg text-(--hero-body) leading-relaxed">
@@ -28,7 +28,7 @@ export default function System() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="glass-card p-10">
+          <div className="glass-card p-6 md:p-10">
             <Database className="text-(--zurich-blue-500) mb-6" size={32} />
             <h3 className="text-2xl font-bold text-(--color-text-primary) mb-4">
               Central Registry
@@ -40,7 +40,7 @@ export default function System() {
               </li>
             </ul>
           </div>
-          <div className="glass-card p-10">
+          <div className="glass-card p-6 md:p-10">
             <Monitor className="text-(--militant-green-500) mb-6" size={32} />
             <h3 className="text-2xl font-bold text-(--color-text-primary) mb-4">
               Live Monitoring

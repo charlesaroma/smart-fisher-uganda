@@ -109,8 +109,8 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* About: Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
-          <div className="p-12 rounded-3xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md transition-all">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 lg:mb-32">
+          <div className="p-8 lg:p-12 rounded-3xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md transition-all">
             <h3 className="text-3xl font-heading tracking-widest uppercase mb-8 text-(--color-heading)">
               The Mission
             </h3>
@@ -120,7 +120,7 @@ export default function About() {
               local producers and ensures national resource sustainability.
             </p>
           </div>
-          <div className="p-12 rounded-3xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md transition-all">
+          <div className="p-8 lg:p-12 rounded-3xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md transition-all">
             <h3 className="text-3xl font-heading tracking-widest uppercase mb-8 text-(--color-heading)">
               The Vision
             </h3>
@@ -138,7 +138,7 @@ export default function About() {
             <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
               Economic Transformation
             </h4>
-            <h2 className="text-4xl lg:text-5xl font-heading text-(--color-heading) uppercase tracking-wide">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-(--color-heading) uppercase tracking-wide">
               Measurable National Impact
             </h2>
           </div>
@@ -146,7 +146,7 @@ export default function About() {
             {metrics.map((metric) => (
               <div
                 key={metric.label}
-                className="p-10 rounded-3xl bg-(--nav-bg) border border-(--nav-border) text-center transition-all"
+                className="p-8 lg:p-10 rounded-3xl bg-(--nav-bg) border border-(--nav-border) text-center transition-all"
               >
                 <div
                   className={`w-14 h-14 rounded-2xl mx-auto mb-8 flex items-center justify-center ${metric.bg}`}
@@ -154,7 +154,7 @@ export default function About() {
                   <metric.icon size={24} className={metric.color} />
                 </div>
                 <div
-                  className={`text-5xl font-heading tracking-widest mb-2 ${metric.color}`}
+                  className={`text-4xl md:text-5xl font-heading tracking-widest mb-2 ${metric.color}`}
                 >
                   {metric.value}
                 </div>
@@ -205,7 +205,7 @@ export default function About() {
             {stakeholders.map((s) => (
               <div
                 key={s.title}
-                className="p-10 rounded-3xl bg-(--nav-bg) border border-(--nav-border) transition-all"
+                className="p-8 lg:p-10 rounded-3xl bg-(--nav-bg) border border-(--nav-border) transition-all"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <s.icon className={`w-8 h-8 ${s.accent}`} />

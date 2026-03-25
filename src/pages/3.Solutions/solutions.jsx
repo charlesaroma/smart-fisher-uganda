@@ -79,11 +79,12 @@ export default function Solutions() {
           <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
             PaaS Architecture
           </h4>
-          <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
             Service Modules
           </h2>
           <p className="text-lg text-(--hero-body) leading-relaxed">
-            Scalable command modules engineered for Uganda&apos;s stakeholder groups.
+            Scalable command modules engineered for Uganda&apos;s stakeholder
+            groups.
           </p>
         </div>
 
@@ -94,7 +95,7 @@ export default function Solutions() {
             return (
               <div
                 key={mod.title}
-                className="p-10 rounded-[2rem] bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md shadow-sm hover:-translate-y-1 transition-all flex flex-col"
+                className="p-6 md:p-10 rounded-4xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md shadow-sm hover:-translate-y-1 transition-all flex flex-col"
               >
                 <div
                   className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border ${c.ring}`}
@@ -116,7 +117,9 @@ export default function Solutions() {
                 <div className="mt-auto space-y-3 pt-6 border-t border-(--nav-border)">
                   {mod.features.map((feat) => (
                     <div key={feat} className="flex gap-3 items-start">
-                      <span className={`mt-2 h-1.5 w-1.5 rounded-full ${c.dot}`} />
+                      <span
+                        className={`mt-2 h-1.5 w-1.5 rounded-full ${c.dot}`}
+                      />
                       <span className="text-sm text-(--color-text-secondary)">
                         {feat}
                       </span>

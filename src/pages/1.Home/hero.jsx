@@ -30,7 +30,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl font-extrabold tracking-tight text-(--hero-title) leading-tight mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-(--hero-title) leading-tight mb-8">
               Securing Uganda&apos;s Waters for Future Generations
             </h1>
 
@@ -83,8 +83,8 @@ export default function Hero() {
             </div> */}
           </div>
 
-          <div className="lg:col-span-5 relative">
-            <div className="relative z-10 scale-110 lg:scale-125">
+          <div className="lg:col-span-5 relative mt-12 lg:mt-0">
+            <div className="relative z-10 scale-100 md:scale-110 lg:scale-125">
               <DotLottieReact
                 src="https://lottie.host/92c511e7-deb0-4f91-a7ae-6b03f4217eea/TELC1s6N5o.lottie"
                 loop
