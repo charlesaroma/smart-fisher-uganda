@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* PRIMARY COLORS — THAMAR BLACK */
+  --thamar-black-950: #000000;
+  --thamar-black-900: #050505;
+  --thamar-black-800: #0a0a0a;
+  --thamar-black-700: #0e0e0e;
+  --thamar-black-600: #131313;
+  --thamar-black-500: #181818;
+  --thamar-black-400: #464646;
+  --thamar-black-300: #747474;
+  --thamar-black-200: #a3a3a3;
+  --thamar-black-100: #d1d1d1;
+  --thamar-black-50:  #ededed;
+
+  /* PRIMARY COLORS — ZURICH BLUE */
+  --zurich-blue-950: #041019;
+  --zurich-blue-900: #071b2a;
+  --zurich-blue-800: #0e3655;
+  --zurich-blue-700: #15527f;
+  --zurich-blue-600: #1c6daa;
+  --zurich-blue-500: #2388d4;
+  --zurich-blue-400: #4fa0dd;
+  --zurich-blue-300: #7bb8e5;
+  --zurich-blue-200: #a7cfee;
+  --zurich-blue-100: #d3e7f6;
+  --zurich-blue-5:  #e5f1fa;
+
+  /* SECONDARY COLORS — MILITANT GREEN */
+  --militant-green-950: #05140a;
+  --militant-green-900: #082111;
+  --militant-green-500: #27a357;
+  --militant-green-400: #52b579;
+
+  /* SECONDARY COLORS — SMOKE */
+  --smoke-900: #313131;
+  --smoke-500: #f5f5f5;
+  --smoke-100: #fdfdfd;
+  --smoke-50:  #ffffff;
+
+  /* CORE BRAND ALIASES */
+  --color-primary: var(--zurich-blue-500);
+  --color-background: var(--thamar-black-950);
+  --color-text-primary: var(--smoke-100);
+  --color-text-secondary: var(--smoke-500);
+  
+  --font-heading: 'Anton', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+
+  /* THEME VARS */
+  --sectionBgA: #000000;
+  --sectionBgB: #050505;
+  --nav-bg: rgba(0, 0, 0, 0.8);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --hero-title: #ffffff;
+  --hero-body: #a3a3a3;
+}
+
+[data-theme='light'] {
+  --sectionBgA: #ffffff;
+  --sectionBgB: #f8fafc;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --hero-title: #0a0a0a;
+  --hero-body: #464646;
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #464646;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--section-bg);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* THE SPINE: Apply this to all section containers */
+.layout-spine {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) { .layout-spine { padding-left: 3rem; padding-right: 3rem; } }
+@media (min-width: 1280px) { .layout-spine { padding-left: 5rem; padding-right: 5rem; } }
+
+.glass-card {
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--nav-border);
+  border-radius: 1.5rem;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(to bottom right, #ffffff, var(--zurich-blue-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
