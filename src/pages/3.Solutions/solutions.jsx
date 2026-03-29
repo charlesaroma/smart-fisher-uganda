@@ -1,6 +1,48 @@
-import React from "react";
-import { Anchor, Landmark, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Anchor, Landmark, Shield, Info } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const FeatureItem = ({ feat, colorDot }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="relative group flex gap-3 items-start cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <span
+        className={`mt-2 h-1.5 w-1.5 rounded-full shrink-0 transition-transform duration-300 group-hover:scale-150 ${colorDot}`}
+      />
+      <span className="text-sm text-(--color-text-secondary) group-hover:text-(--color-text-primary) transition-colors">
+        {feat.name}
+      </span>
+
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            className="absolute left-0 bottom-full mb-4 w-64 p-4 rounded-2xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-xl shadow-2xl z-50 pointer-events-none"
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <Info size={14} className="text-blue-500" />
+              <span className="text-[10px] font-mono uppercase tracking-widest text-blue-500 font-bold">
+                Insight
+              </span>
+            </div>
+            <p className="text-xs text-(--color-text-secondary) leading-relaxed">
+              {feat.desc}
+            </p>
+            {/* Arrow */}
+            <div className="absolute top-full left-4 -translate-y-1/2 w-3 h-3 bg-(--nav-bg) border-r border-b border-(--nav-border) rotate-45" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 export default function Solutions() {
   const modules = [
@@ -11,10 +53,22 @@ export default function Solutions() {
       icon: Anchor,
       accent: "blue",
       features: [
-        "Catch History Dashboard",
-        "SACCO Loan Portal",
-        "Health Portal",
-        "Vessel Registration Docs",
+        {
+          name: "Catch History Dashboard",
+          desc: "Track every harvest with GPS-tagged records and species-specific data.",
+        },
+        {
+          name: "SACCO Loan Portal",
+          desc: "Unlock credit based on your verified fishing history and vessel ownership.",
+        },
+        {
+          name: "Health Portal",
+          desc: "Access specialized maritime medical services and insurance for your crew.",
+        },
+        {
+          name: "Vessel Registration Docs",
+          desc: "Digitally sign and store official documentation for national compliance.",
+        },
       ],
     },
     {
@@ -24,9 +78,18 @@ export default function Solutions() {
       icon: Shield,
       accent: "emerald",
       features: [
-        "Live Fleet Map",
-        "Geofence Breach Alerts",
-        "Search & Rescue (SAR) Ping",
+        {
+          name: "Live Fleet Map",
+          desc: "Real-time visualization of all active vessels across Uganda's water bodies.",
+        },
+        {
+          name: "Geofence Breach Alerts",
+          desc: "Automated notifications if vessels enter protected or restricted zones.",
+        },
+        {
+          name: "Search & Rescue (SAR) Ping",
+          desc: "Instant distress signaling with precise coordinates for rapid response.",
+        },
       ],
     },
     {
@@ -36,9 +99,18 @@ export default function Solutions() {
       icon: Landmark,
       accent: "green",
       features: [
-        "Automated Tax Invoicing",
-        "Real-time Yield Forecasts",
-        "Export Traceability Logs",
+        {
+          name: "Automated Tax Invoicing",
+          desc: "Frictionless revenue collection integrated directly with the catch reporting.",
+        },
+        {
+          name: "Real-time Yield Forecasts",
+          desc: "Predictive analytics on fish stocks to inform national fishing quotas.",
+        },
+        {
+          name: "Export Traceability Logs",
+          desc: "End-to-end blockchain-ready audits for international export standards.",
+        },
       ],
     },
   ];
@@ -94,12 +166,13 @@ export default function Solutions() {
             const c = accentClass(mod.accent);
             const Icon = mod.icon;
             return (
-              <div
+              <motion.div
                 key={mod.title}
-                className="p-6 md:p-10 rounded-4xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md shadow-sm hover:-translate-y-1 transition-all flex flex-col"
+                whileHover={{ y: -5 }}
+                className="p-6 md:p-10 rounded-4xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md shadow-sm transition-all flex flex-col group/card hover:shadow-2xl hover:shadow-blue-500/5"
               >
                 <div
-                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border ${c.ring}`}
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 group-hover/card:scale-110 ${c.ring}`}
                 >
                   <Icon size={30} className={c.text} />
                 </div>
@@ -111,23 +184,16 @@ export default function Solutions() {
                   Target: {mod.user}
                 </div>
 
-                <p className="text-(--color-text-secondary) leading-relaxed mb-8">
+                <p className="text-(--color-text-secondary) leading-relaxed mb-8 font-body">
                   {mod.func}
                 </p>
 
-                <div className="mt-auto space-y-3 pt-6 border-t border-(--nav-border)">
+                <div className="mt-auto space-y-4 pt-6 border-t border-(--nav-border)">
                   {mod.features.map((feat) => (
-                    <div key={feat} className="flex gap-3 items-start">
-                      <span
-                        className={`mt-2 h-1.5 w-1.5 rounded-full ${c.dot}`}
-                      />
-                      <span className="text-sm text-(--color-text-secondary)">
-                        {feat}
-                      </span>
-                    </div>
+                    <FeatureItem key={feat.name} feat={feat} colorDot={c.dot} />
                   ))}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
