@@ -13,6 +13,7 @@ export default function Solutions() {
       features: [
         "Catch History Dashboard",
         "SACCO Loan Portal",
+        "Health Portal",
         "Vessel Registration Docs",
       ],
     },
