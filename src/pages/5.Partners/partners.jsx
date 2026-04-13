@@ -33,32 +33,33 @@ export default function Partners() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+        <div className="flex flex-wrap justify-center items-start gap-8 lg:gap-12">
           {partners.map((p, i) => (
-            <motion.div
-              key={p.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.08 }}
-              className="group rounded-3xl bg-white border border-(--nav-border) p-8 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2"
-            >
-              <div className="h-24 w-full flex items-center justify-center mb-6">
-                <img
-                  src={p.src}
-                  alt={p.name}
-                  className="max-h-full max-w-[80%] object-contain"
-                />
-              </div>
-              <div className="space-y-1">
-                <p className="text-sm font-bold tracking-tight text-slate-900">
-                  {p.name}
-                </p>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
-                  Official Partner
-                </p>
-              </div>
-            </motion.div>
+              <motion.div
+                key={p.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="flex flex-col items-center group cursor-pointer"
+              >
+                {/* Logo Card - Fixed Size */}
+                <div className="w-44 h-28 md:w-48 md:h-32 lg:w-56 lg:h-36 bg-white rounded-2xl border border-(--nav-border) shadow-sm flex items-center justify-center p-6 mb-4 transition-all duration-300 group-hover:shadow-xl group-hover:border-blue-500/30 group-hover:-translate-y-2">
+                  <img
+                    src={p.src}
+                    alt={p.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                
+                {/* Partner Identity - Below Card */}
+                <div className="text-center w-full">
+                  <p className="text-sm font-bold tracking-tight text-(--color-text-primary) uppercase group-hover:text-blue-600 transition-colors">
+                    {p.name}
+                  </p>
+                  <div className="mt-1 h-0.5 w-0 bg-blue-500 mx-auto group-hover:w-full transition-all duration-300" />
+                </div>
+              </motion.div>
           ))}
         </div>
       </div>
