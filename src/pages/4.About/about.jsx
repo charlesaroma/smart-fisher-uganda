@@ -114,7 +114,7 @@ export default function About() {
             Identity & Vision
           </h4>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading text-(--color-heading) uppercase tracking-tight">
-            About Smart-Fisher <span className="text-blue-600">Uganda</span>
+            About Smart Fisher <span className="text-blue-600">Technologies</span>
           </h1>
         </div>
 
@@ -186,7 +186,7 @@ export default function About() {
               Unregulated Waters to National Asset
             </h2>
             <p className="text-xl text-(--hero-body) leading-relaxed mb-10">
-              Smart-Fisher Uganda is engineered to resolve critical bottlenecks
+              Smart Fisher Technologies is engineered to resolve critical bottlenecks
               through pure digital governance, recovering lost revenue and
               securing maritime sovereignty.
             </p>

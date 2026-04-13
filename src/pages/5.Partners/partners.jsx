@@ -27,7 +27,7 @@ export default function Partners() {
             National Partners
           </h2>
           <p className="text-lg text-(--hero-body) leading-relaxed">
-            Smart-Fisher Uganda operates within a collaborative sovereign
+            Smart Fisher Technologies operates within a collaborative sovereign
             hierarchy ensuring data integrity and nationwide implementation.
           </p>
         </div>

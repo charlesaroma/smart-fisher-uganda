@@ -37,10 +37,10 @@ export default function Navbar() {
           />
           <div className="flex flex-col items-start leading-none">
             <span className="font-heading text-xl uppercase tracking-tighter">
-              Smart-Fisher
+              Smart Fisher
             </span>
             <span className="text-[10px] uppercase tracking-widest text-blue-500 font-bold">
-              Uganda
+              Technologies
             </span>
           </div>
         </button>

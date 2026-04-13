@@ -32,15 +32,15 @@ export default function Footer() {
                 <img
                   src="/SMART FISHER_LOGO_v2.png"
                   className="w-8 h-8 object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                  alt="Smart-Fisher Logo"
+                  alt="Smart Fisher Technologies Logo"
                 />
               </div>
               <div className="flex flex-col items-start leading-none">
                 <span className="font-heading text-2xl uppercase tracking-tighter text-(--color-text-primary)">
-                  Smart-Fisher
+                  Smart Fisher
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.3em] text-(--zurich-blue-500) font-bold">
-                  Uganda
+                  Technologies
                 </span>
               </div>
             </button>
@@ -146,7 +146,7 @@ export default function Footer() {
         {/* Legal & Copyright Bottom Bar */}
         <div className="pt-12 border-t border-(--nav-border) flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-(--color-text-muted) opacity-60">
-            © {currentYear} Smart-Fisher Uganda. Sovereign Digital
+            © {currentYear} Smart Fisher Technologies. Sovereign Digital
             Infrastructure.
           </div>
           <div className="flex gap-10">

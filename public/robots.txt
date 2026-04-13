@@ -1,0 +1,6 @@
+# Robots.txt for Smart Fisher Technologies
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://smartfisher.go.ug/sitemap.xml

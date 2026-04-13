@@ -23,7 +23,7 @@ export default function System() {
             The Platform
           </h2>
           <p className="text-lg text-(--hero-body) leading-relaxed">
-            Smart-Fisher Uganda is built as sovereign digital infrastructure.
+            Smart Fisher Technologies is built as sovereign digital infrastructure.
           </p>
         </div>
 
