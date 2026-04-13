@@ -49,6 +49,8 @@ export default function Partners() {
                     src={p.src}
                     alt={p.name}
                     className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 

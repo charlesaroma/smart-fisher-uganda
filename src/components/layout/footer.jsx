@@ -8,8 +8,11 @@ import {
   ExternalLink,
   ShieldCheck,
 } from "lucide-react";
+import useTheme from "../theme/useTheme";
 
 export default function Footer() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
   const currentYear = new Date().getFullYear();
 
   const scrollTo = (id) => {
@@ -30,9 +33,11 @@ export default function Footer() {
             >
               <div className="w-12 h-12 rounded-xl bg-(--nav-bg) border border-(--nav-border) flex items-center justify-center transition-all group-hover:scale-110 group-hover:border-(--zurich-blue-500)">
                 <img
-                  src="/SMART FISHER_LOGO_v2.png"
+                  src={isLight ? "/SMART FISHER_LOGO_v2.png" : "/SMART FISHER_LOGO_v3_blue.png"}
                   className="w-8 h-8 object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                   alt="Smart Fisher Technologies Logo"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="flex flex-col items-start leading-none">
