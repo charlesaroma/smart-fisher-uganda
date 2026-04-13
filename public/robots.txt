@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://smartfisher.go.ug/sitemap.xml
+Sitemap: https://smart-fisher-uganda.netlify.app/sitemap.xml
