@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Page -->
   <url>
-    <loc>https://smart-fisher-uganda.netlify.app/</loc>
+    <loc>https://smart-fisher-technologies.netlify.app/</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -10,31 +10,31 @@
   
   <!-- Section Anchors (Jump Links) -->
   <url>
-    <loc>https://smart-fisher-uganda.netlify.app/#system</loc>
+    <loc>https://smart-fisher-technologies.netlify.app/#system</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smart-fisher-uganda.netlify.app/#solutions</loc>
+    <loc>https://smart-fisher-technologies.netlify.app/#solutions</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smart-fisher-uganda.netlify.app/#about</loc>
+    <loc>https://smart-fisher-technologies.netlify.app/#about</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smart-fisher-uganda.netlify.app/#partners</loc>
+    <loc>https://smart-fisher-technologies.netlify.app/#partners</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smart-fisher-uganda.netlify.app/#contact</loc>
+    <loc>https://smart-fisher-technologies.netlify.app/#contact</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -6,6 +6,7 @@ const partners = [
   { name: "NITA-U", src: "/NITA-LOGO.png" },
   { name: "NaFIRRI", src: "/NAFIRRI-LOGO.png" },
   { name: "URA", src: "/URA.png" },
+  { name: "LVFO", src: "/LVFO-LOGO.png" },
 ];
 
 export default function Partners() {
@@ -45,7 +46,7 @@ export default function Partners() {
               <img
                 src={p.src}
                 alt={p.name}
-                className="h-12 w-auto grayscale contrast-50 hover:grayscale-0 transition-all duration-300"
+                className="h-11 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               />
             </motion.div>
           ))}
