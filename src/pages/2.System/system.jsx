@@ -9,7 +9,7 @@ export default function System() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
-      className="scroll-mt-24 py-24 lg:py-32 bg-(--sectionBgB)"
+      className="scroll-mt-24 pt-12 pb-24 lg:pt-16 lg:pb-32 bg-(--sectionBgB)"
     >
       <div className="layout-spine">
         <div className="text-center max-w-3xl mx-auto mb-20">

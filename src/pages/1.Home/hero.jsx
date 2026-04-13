@@ -14,7 +14,7 @@ export default function Hero() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="scroll-mt-24 relative py-32 lg:py-48 overflow-hidden bg-(--sectionBgA)"
+      className="scroll-mt-24 relative pt-16 pb-16 lg:pt-24 lg:pb-24 overflow-hidden bg-(--sectionBgA)"
     >
       {/* Dynamic Background */}
       <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
@@ -41,7 +41,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-(--hero-title) leading-tight mb-8">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight text-(--hero-title) leading-tight mb-8">
               Securing Uganda&apos;s Waters for Future Generations
             </h1>
 
