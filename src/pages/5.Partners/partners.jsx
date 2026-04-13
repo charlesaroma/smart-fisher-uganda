@@ -33,7 +33,7 @@ export default function Partners() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {partners.map((p, i) => (
             <motion.div
               key={p.name}
@@ -41,13 +41,23 @@ export default function Partners() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.08 }}
-              className="rounded-2xl bg-(--nav-bg) border border-(--nav-border) backdrop-blur-md p-6 flex items-center justify-center"
+              className="group rounded-3xl bg-white border border-(--nav-border) p-8 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2"
             >
-              <img
-                src={p.src}
-                alt={p.name}
-                className="h-11 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-              />
+              <div className="h-24 w-full flex items-center justify-center mb-6">
+                <img
+                  src={p.src}
+                  alt={p.name}
+                  className="max-h-full max-w-[80%] object-contain"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-bold tracking-tight text-slate-900">
+                  {p.name}
+                </p>
+                <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+                  Official Partner
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
