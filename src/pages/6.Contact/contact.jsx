@@ -51,19 +51,19 @@ export default function Contact() {
                 {
                   icon: MapPin,
                   label: "HQ Command",
-                  val: "Plot 123, Jinja Road",
+                  val: "Wabyona Building, 2nd floor, Namboole – Bweyogerere, Jinja Road",
                   accent: "var(--zurich-blue-500)",
                 },
                 {
                   icon: Mail,
                   label: "Secure Server",
-                  val: "info@smartfisher.go.ug",
+                  val: "info@ffou.org",
                   accent: "var(--militant-green-500)",
                 },
                 {
                   icon: Phone,
                   label: "Voice Hotline",
-                  val: "0800 100 200",
+                  val: "0800 100261 / +256 414 583 081",
                   accent: "var(--zurich-blue-500)",
                 },
               ].map((item, idx) => (
@@ -143,7 +143,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-(--zurich-blue-500) cursor-pointer hover:bg-(--zurich-blue-400) hover:shadow-lg hover:shadow-blue-500/20 text-white py-4 rounded-xl font-heading uppercase tracking-[0.3em] transition-all duration-300 flex items-center justify-center gap-3 active:scale-[0.97]"
+                  className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-4 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
                 >
                   Transmit Inquiry{" "}
                   <Send

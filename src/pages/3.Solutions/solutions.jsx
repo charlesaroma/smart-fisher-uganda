@@ -149,7 +149,7 @@ export default function Solutions() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
+          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-(--zurich-blue-500) mb-4">
             PaaS Architecture
           </h4>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">

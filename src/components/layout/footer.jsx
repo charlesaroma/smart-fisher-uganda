@@ -8,6 +8,7 @@ import {
   ExternalLink,
   ShieldCheck,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import useTheme from "../theme/useTheme";
 
 export default function Footer() {
@@ -104,7 +105,7 @@ export default function Footer() {
                   className="text-(--zurich-blue-500) shrink-0"
                 />
                 <span className="text-sm text-(--color-text-secondary) leading-relaxed group-hover:text-(--color-text-primary) transition-colors font-body">
-                  Plot 123, Jinja Road, <br /> Kampala, Uganda
+                  Wabyona Building, 2nd floor, <br /> Namboole – Bweyogerere, Jinja Road
                 </span>
               </li>
               <li className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group cursor-pointer">
@@ -113,7 +114,7 @@ export default function Footer() {
                   className="text-(--militant-green-500) shrink-0"
                 />
                 <span className="text-sm text-(--color-text-secondary) group-hover:text-(--color-text-primary) transition-colors font-body">
-                  info@smartfisher.go.ug
+                  info@ffou.org
                 </span>
               </li>
               <li className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
@@ -122,28 +123,31 @@ export default function Footer() {
                   className="text-(--zurich-blue-500) shrink-0"
                 />
                 <span className="text-sm text-(--color-text-secondary) group-hover:text-(--color-text-primary) transition-colors font-bold font-body">
-                  0800 100 200
+                  0800 100261 / +256 414 583 081
                 </span>
               </li>
             </ul>
           </div>
 
-          {/* Portal Interface — Col Span 3 */}
+          {/* App Guide Interface — Col Span 3 */}
           <div className="lg:col-span-3">
             <div className="glass-card p-6 border-(--nav-border) hover:border-(--zurich-blue-500)/30 transition-all flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="flex items-center gap-2 mb-4">
                 <ShieldCheck size={16} className="text-(--zurich-blue-500)" />
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-(--color-text-primary)">
-                  Command Portal
+                  Mobile Operations
                 </h4>
               </div>
               <p className="text-[11px] text-(--color-text-muted) mb-6 leading-relaxed font-body">
-                Access secure government and cooperative interfaces via
-                encrypted node.
+                Deploy state-of-the-art surveillance and tracking data to your field operatives.
               </p>
-              <button className="w-full py-3 bg-(--zurich-blue-500) hover:bg-(--zurich-blue-400) text-white rounded-xl text-[10px] font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 border-none shadow-lg shadow-blue-950/20">
-                Secure Login <ExternalLink size={12} />
-              </button>
+              <Link 
+                to="/mobile-overview"
+                className="w-full py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold text-xs tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer border-none no-underline"
+                onClick={() => window.scrollTo(0,0)}
+              >
+                Mobile Overview <ExternalLink size={14} />
+              </Link>
             </div>
           </div>
         </div>

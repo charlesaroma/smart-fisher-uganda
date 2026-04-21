@@ -21,10 +21,10 @@ export default function Partners() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
+          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-(--zurich-blue-500) mb-4">
             Institutional Framework
           </h4>
-          <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-(--hero-title) mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
             National Partners
           </h2>
           <p className="text-lg text-(--hero-body) leading-relaxed">
@@ -44,7 +44,7 @@ export default function Partners() {
                 className="flex flex-col items-center group cursor-pointer"
               >
                 {/* Logo Card - Fixed Size */}
-                <div className="w-44 h-28 md:w-48 md:h-32 lg:w-56 lg:h-36 bg-white rounded-2xl border border-(--nav-border) shadow-sm flex items-center justify-center p-6 mb-4 transition-all duration-300 group-hover:shadow-xl group-hover:border-blue-500/30 group-hover:-translate-y-2">
+                <div className="w-44 h-28 md:w-48 md:h-32 lg:w-56 lg:h-36 bg-white rounded-2xl border border-(--nav-border) shadow-sm flex items-center justify-center p-6 mb-4 transition-all duration-300 group-hover:shadow-xl group-hover:border-(--zurich-blue-500)/30 group-hover:-translate-y-2">
                   <img
                     src={p.src}
                     alt={p.name}
@@ -56,10 +56,10 @@ export default function Partners() {
                 
                 {/* Partner Identity - Below Card */}
                 <div className="text-center w-full">
-                  <p className="text-sm font-bold tracking-tight text-(--color-text-primary) uppercase group-hover:text-blue-600 transition-colors">
+                  <p className="text-sm font-bold tracking-tight text-(--color-text-primary) uppercase group-hover:text-(--zurich-blue-500) transition-colors">
                     {p.name}
                   </p>
-                  <div className="mt-1 h-0.5 w-0 bg-blue-500 mx-auto group-hover:w-full transition-all duration-300" />
+                  <div className="mt-1 h-0.5 w-0 bg-(--zurich-blue-500) mx-auto group-hover:w-full transition-all duration-300" />
                 </div>
               </motion.div>
           ))}

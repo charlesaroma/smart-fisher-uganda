@@ -3,7 +3,7 @@
   <!-- Main Page -->
   <url>
     <loc>https://smart-fisher-technologies.netlify.app/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,32 +11,38 @@
   <!-- Section Anchors (Jump Links) -->
   <url>
     <loc>https://smart-fisher-technologies.netlify.app/#system</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://smart-fisher-technologies.netlify.app/#solutions</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://smart-fisher-technologies.netlify.app/#about</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://smart-fisher-technologies.netlify.app/#partners</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://smart-fisher-technologies.netlify.app/#contact</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smart-fisher-technologies.netlify.app/mobile-overview</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

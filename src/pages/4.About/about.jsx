@@ -110,12 +110,12 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* About: Section Header */}
         <div className="mb-20 text-center">
-          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
+          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-(--zurich-blue-500) mb-4">
             Identity & Vision
           </h4>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading text-(--color-heading) uppercase tracking-tight">
-            About Smart Fisher <span className="text-blue-600">Technologies</span>
-          </h1>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
+            About Smart Fisher <span className="text-(--zurich-blue-500)">Technologies</span>
+          </h2>
         </div>
 
         {/* About: Mission & Vision */}
@@ -145,10 +145,10 @@ export default function About() {
         {/* About: Core Outcomes (Merged from Impact) */}
         <div className="mb-24 lg:mb-40">
           <div className="text-center mb-16 lg:mb-20">
-            <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-blue-600 mb-4">
+            <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-(--zurich-blue-500) mb-4">
               Economic Transformation
             </h4>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-(--color-heading) uppercase tracking-wide">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
               Measurable National Impact
             </h2>
           </div>
@@ -179,10 +179,10 @@ export default function About() {
         {/* About: Pillars */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5">
-            <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-emerald-600 mb-4">
+            <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-(--militant-green-500) mb-4">
               Strategic Framework
             </h4>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading text-(--color-heading) uppercase tracking-wide mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
               Unregulated Waters to National Asset
             </h2>
             <p className="text-xl text-(--hero-body) leading-relaxed mb-10">

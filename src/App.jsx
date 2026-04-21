@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
 import { ThemeProvider } from "./components/theme/ThemeProvider";
@@ -8,17 +9,21 @@ import Solutions from "./pages/3.Solutions/solutions";
 import About from "./pages/4.About/about";
 import Partners from "./pages/5.Partners/partners";
 import Contact from "./pages/6.Contact/contact";
+import MobileOverviewPage from "./pages/7.MobileOverview/MobileOverviewPage";
+
+import AppShowcase from "./pages/1.Home/AppShowcase";
 
 const sectionTitles = {
   home: "Home",
   system: "The Platform",
   solutions: "Solutions",
+  showcase: "Showcase",
   about: "About Us",
   partners: "Partners",
   contact: "Contact",
 };
 
-function App() {
+const HomePage = () => {
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
     const options = {
@@ -40,31 +45,39 @@ function App() {
     }, options);
 
     sections.forEach((section) => observer.observe(section));
-
     return () => observer.disconnect();
   }, []);
 
   return (
+    <main>
+      <Hero />
+      <AppShowcase />
+      <System />
+      <Solutions />
+      <About />
+      <Partners />
+      <Contact />
+    </main>
+  );
+};
+
+
+function App() {
+  return (
     <ThemeProvider>
       <div className="min-h-screen">
-        {/* App: Navigation */}
         <Navbar />
-
-        {/* App: Main Content */}
-        <main>
-          <Hero />
-          <System />
-          <Solutions />
-          <About />
-          <Partners />
-          <Contact />
-        </main>
-
-        {/* App: Footer */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/mobile-overview" element={<MobileOverviewPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
         <Footer />
       </div>
     </ThemeProvider>
   );
 }
 
+
 export default App;
+

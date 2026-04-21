@@ -13,13 +13,10 @@ export default function System() {
     >
       <div className="layout-spine">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-(--nav-bg) border border-(--nav-border) mb-6">
-            <span className="w-2 h-2 rounded-full bg-(--zurich-blue-500) animate-pulse" />
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-(--color-text-muted)">
-              Core Platform
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading uppercase text-(--hero-title) mb-6">
+          <h4 className="text-sm font-mono tracking-[0.4em] uppercase text-(--zurich-blue-500) mb-4">
+            Core Platform
+          </h4>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--color-heading) mb-8">
             The Platform
           </h2>
           <p className="text-lg text-(--hero-body) leading-relaxed">
