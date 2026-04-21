@@ -62,7 +62,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
               <button
                 onClick={() => scrollTo("system")}
-                className="w-full sm:w-auto bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                className="w-full sm:w-auto bg-(--zurich-blue-500) text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95 border-none"
               >
                 Explore Platform
               </button>

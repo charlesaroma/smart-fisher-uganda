@@ -7,6 +7,7 @@ import {
   Shield,
   ExternalLink,
   ShieldCheck,
+  ArrowUp,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import useTheme from "../theme/useTheme";
@@ -15,10 +16,23 @@ export default function Footer() {
   const { theme } = useTheme();
   const isLight = theme === "light";
   const currentYear = new Date().getFullYear();
+  const [showScrollTop, setShowScrollTop] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -135,15 +149,15 @@ export default function Footer() {
               <div className="flex items-center gap-2 mb-4">
                 <ShieldCheck size={16} className="text-(--zurich-blue-500)" />
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-(--color-text-primary)">
-                  Mobile Operations
+                  Operative Assets
                 </h4>
               </div>
               <p className="text-[11px] text-(--color-text-muted) mb-6 leading-relaxed font-body">
-                Deploy state-of-the-art surveillance and tracking data to your field operatives.
+                Synchronizing field units with high-fidelity maritime data and sovereign digital infrastructure.
               </p>
               <Link 
                 to="/mobile-overview"
-                className="w-full py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold text-xs tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer border-none no-underline"
+                className="w-full py-3.5 bg-(--zurich-blue-500) text-white rounded-full font-bold text-xs tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer border-none no-underline"
                 onClick={() => window.scrollTo(0,0)}
               >
                 Mobile Overview <ExternalLink size={14} />
@@ -171,6 +185,17 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Floating Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 z-[60] w-12 h-12 rounded-full bg-(--zurich-blue-500) text-white shadow-2xl flex items-center justify-center transition-all duration-500 hover:-translate-y-2 active:scale-90 cursor-pointer border-none ${
+          showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+        }`}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={24} />
+      </button>
     </footer>
   );
 }

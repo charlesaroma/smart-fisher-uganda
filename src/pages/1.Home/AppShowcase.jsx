@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, BarChart, Lock, Target, PlayCircle } from "lucide-react";
+import { Shield, BarChart, Lock, Target } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const screenshots = [
   {
@@ -36,6 +37,7 @@ const screenshots = [
 ];
 
 export default function AppShowcase() {
+  const navigate = useNavigate();
   return (
     <section id="showcase" className="py-24 lg:py-32 bg-blue-50/30 dark:bg-(--sectionBgA) relative overflow-hidden">
       {/* Soft Aura Background */}
@@ -67,21 +69,7 @@ export default function AppShowcase() {
             Don't just track your fleet—secure it. Reliable synchronization of your dashboard with on-the-ground operatives to show the true pulse of your operations.
           </motion.p>
           
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
-          >
-            <button className="w-full sm:w-auto bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95">
-              Download For Free
-            </button>
-            <button className="w-full sm:w-auto bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wide border border-gray-200 dark:border-gray-800 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95">
-              <PlayCircle size={18} />
-              Watch Demo
-            </button>
-          </motion.div>
+
         </div>
 
         {/* Desktop & Tablet View: Extravagant Overlapping Cluster */}

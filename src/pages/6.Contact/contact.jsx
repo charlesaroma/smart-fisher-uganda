@@ -143,7 +143,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-4 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
+                  className="w-full bg-(--zurich-blue-500) text-white py-4 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group border-none"
                 >
                   Transmit Inquiry{" "}
                   <Send

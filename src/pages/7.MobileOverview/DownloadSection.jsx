@@ -55,7 +55,7 @@ export default function DownloadSection() {
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <button
                 onClick={handleDownload}
-                className="w-full sm:w-auto bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                className="w-full sm:w-auto bg-(--zurich-blue-500) text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95 border-none"
               >
                 Download Brochure
                 <Download size={18} className="group-hover:translate-y-0.5 transition-transform" />
