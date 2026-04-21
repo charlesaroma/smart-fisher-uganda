@@ -34,17 +34,14 @@ export default function DownloadSection() {
       <div className="layout-spine relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:max-w-2xl text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+            <motion.h4
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-(--nav-bg) border border-(--nav-border) mb-6 shadow-sm"
+              className="text-sm font-mono tracking-[0.4em] uppercase text-(--zurich-blue-500) mb-8"
             >
-              <FileText size={14} className="text-(--zurich-blue-500)" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-(--zurich-blue-500)">
-                Official Resource
-              </span>
-            </motion.div>
+              Official Resource
+            </motion.h4>
             <h2 className="text-4xl md:text-5xl lg:text-5xl font-heading text-(--color-heading) mb-6 uppercase leading-tight">
               Get the Complete <br />
               <span className="text-(--zurich-blue-500)">Mobile Overview</span>
@@ -74,31 +71,26 @@ export default function DownloadSection() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative lg:w-1/3"
+            className="relative lg:w-1/3 flex flex-col items-center lg:items-start"
           >
-            <div className="glass-card p-8 bg-(--nav-bg) border border-(--nav-border) rounded-3xl shadow-2xl relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 opacity-[0.05] dark:opacity-10 pointer-events-none">
-                <FileText size={120} className="text-(--zurich-blue-500)" />
+            <div className="relative z-10 w-full">
+              <div className="w-16 h-16 bg-(--zurich-blue-500) flex items-center justify-center mb-8 shadow-2xl">
+                <FileText size={32} className="text-white" />
               </div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-(--zurich-blue-500) flex items-center justify-center mb-8 shadow-lg shadow-(--zurich-blue-500)/30">
-                  <FileText size={32} className="text-white" />
-                </div>
-                <h4 className="text-xl font-bold text-(--color-heading) mb-2 uppercase tracking-wide">
-                  Technical Spec
-                </h4>
-                <p className="text-sm text-(--color-text-secondary) mb-6 font-body leading-relaxed">
-                  Version 2.4.0 (2026) <br />
-                  Format: PDF (4.2 MB)
-                </p>
-                <div className="h-1.5 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="h-full bg-(--zurich-blue-500)"
-                  />
-                </div>
+              <h4 className="text-xl font-bold text-(--color-heading) mb-2 uppercase tracking-wide">
+                Technical Spec
+              </h4>
+              <p className="text-sm text-(--color-text-secondary) mb-6 font-body leading-relaxed">
+                Version 2.4.0 (2026) <br />
+                Format: PDF (4.2 MB)
+              </p>
+              <div className="h-1 w-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                  className="h-full bg-(--zurich-blue-500)"
+                />
               </div>
             </div>
           </motion.div>
